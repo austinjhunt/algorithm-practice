@@ -56,13 +56,13 @@ def partition(a: list, low: int = 0, high: int = 0):
     return leftwall - 1
 
 
-def qs(a: list, low: int = 0, high: int = 0):
-    logger.info({"action": "qs", "a": a, "low": low, "high": high})
+def quicksort(a: list, low: int = 0, high: int = 0):
+    logger.info({"action": "quicksort", "a": a, "low": low, "high": high})
     if low < high:
         pivot_index = partition(a, low, high)
-        logger.info({"action": "qs", "pivot_index": pivot_index})
-        qs(a, low, pivot_index - 1)
-        qs(a, pivot_index + 1, high)
+        logger.info({"action": "quicksort", "pivot_index": pivot_index})
+        quicksort(a, low, pivot_index - 1)
+        quicksort(a, pivot_index + 1, high)
     return a
 
 
@@ -75,7 +75,7 @@ def test_quicksort(lists):
             logger.info({"action": "test_quicksort", "list": n_copy})
             n_sorted = sorted(n_copy)
             low, high = (0, len(n_copy) - 1)
-            out = qs(n_copy, low, high)
+            out = quicksort(n_copy, low, high)
             logger.info({"action": "test_quicksort", "list": n_copy, "output": out})
             assert out == n_sorted
             logger.info(

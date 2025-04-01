@@ -25,10 +25,10 @@ class Queue:
     def pop(self):
         if self.is_empty():
             return None
-        # Separate head from queue
         current_head = self.head
-        current_head.set_next(None)
 
         # Update head of queue to next in line
         self.head = self.head.get_next()
+
+        current_head.set_next(None)  # not attached anymore
         return current_head

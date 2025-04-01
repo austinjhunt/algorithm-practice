@@ -14,7 +14,7 @@ def binarysearch(array, target, start, end):
     logger.info(
         {
             "action": "binarysearch",
-            "array": array,
+            "array": f"{array[:5]}...{array[-5:]}",
             "target": target,
             "start": start,
             "end": end,

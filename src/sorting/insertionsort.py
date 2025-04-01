@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 ## Mark array elements traversed so far as fully sorted.
 
 
-def insertion_sort(a: list):
+def insertion_sort_old(a: list):
     sorted_a = []
     for i in range(len(a)):
         insert(a[i], sorted_a)
@@ -34,7 +34,7 @@ def insert(v, a):
     )
 
 
-def isort_better(a: list):
+def insertion_sort(a: list):
     for i in range(len(a)):
         j = i
         while j > 0 and a[j - 1] > a[j]:
@@ -52,7 +52,7 @@ def test_insertionsort(lists):
             n_copy = [el for el in n]
             logger.info({"action": "test_insertionsort", "list": n_copy})
             n_sorted = sorted(n_copy)
-            out = isort_better(n_copy)
+            out = insertion_sort(n_copy)
             logger.info({"action": "test_insertionsort", "list": n_copy, "output": out})
             assert n_sorted == out
             logger.info(

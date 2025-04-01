@@ -1,18 +1,16 @@
-from src.sorting import (
-    test_bubblesort,
-    test_heapsort,
-    test_insertionsort,
-    test_mergesort,
-    test_quicksort,
-    nums,
-    words,
-)
-
 from src.searching import test_dfs, test_bfs, test_binarysearch
-
-from src.structures.hashtable import test_hashtable
-
 import argparse
+import unittest
+import os
+import sys
+
+
+def run_tests(test_directory: str):
+    loader = unittest.TestLoader()
+    suite = loader.discover(start_dir=test_directory, pattern="*.py")
+    runner = unittest.TextTestRunner()
+    runner.run(suite)
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -21,25 +19,13 @@ parser.add_argument(
 parser.add_argument(
     "--searching", action="store_true", default=False, help="test search algorithms"
 )
-
 parser.add_argument(
     "--structures", action="store_true", default=False, help="test data structures"
 )
 args = parser.parse_args()
-
 if args.sorting:
-
-    test_lists = nums + words
-    test_quicksort(test_lists)
-    test_mergesort(test_lists)
-    test_bubblesort(test_lists)
-    test_insertionsort(test_lists)
-    test_heapsort(test_lists)
-
+    run_tests(os.path.join(os.path.dirname(__file__), "test", "sorting"))
 if args.searching:
-    test_dfs()
-    test_bfs()
-    test_binarysearch()
-
+    run_tests(os.path.join(os.path.dirname(__file__), "test", "searching"))
 if args.structures:
-    test_hashtable()
+    run_tests(os.path.join(os.path.dirname(__file__), "test", "structures"))

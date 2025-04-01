@@ -101,3 +101,7 @@ def test_hashtable():
     ht = HashTable(size=8)
     for i in range(25):
         ht.insert(random.choice(flattened_words_list), i * i)
+
+
+if __name__ == "__main__":
+    test_hashtable()
