@@ -10,3 +10,4 @@ logging.basicConfig(
 
 from .dfs import test_dfs
 from .bfs import test_bfs
+from .binary import test_binarysearch

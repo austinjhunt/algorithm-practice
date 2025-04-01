@@ -8,7 +8,7 @@ from src.sorting import (
     words,
 )
 
-from src.searching import test_dfs, test_bfs
+from src.searching import test_dfs, test_bfs, test_binarysearch
 
 import argparse
 
@@ -33,3 +33,4 @@ if args.sorting:
 if args.searching:
     test_dfs()
     test_bfs()
+    test_binarysearch()
