@@ -10,6 +10,8 @@ from src.sorting import (
 
 from src.searching import test_dfs, test_bfs, test_binarysearch
 
+from src.structures.hashtable import test_hashtable
+
 import argparse
 
 parser = argparse.ArgumentParser()
@@ -18,6 +20,10 @@ parser.add_argument(
 )
 parser.add_argument(
     "--searching", action="store_true", default=False, help="test search algorithms"
+)
+
+parser.add_argument(
+    "--structures", action="store_true", default=False, help="test data structures"
 )
 args = parser.parse_args()
 
@@ -34,3 +40,6 @@ if args.searching:
     test_dfs()
     test_bfs()
     test_binarysearch()
+
+if args.structures:
+    test_hashtable()
