@@ -4,7 +4,7 @@ Binary search implementation
 
 import random
 import logging
-from src.sorting.sample import nums as numeric_lists
+from src.sample import nums as numeric_lists
 
 logger = logging.getLogger(__name__)
 

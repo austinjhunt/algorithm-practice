@@ -1,6 +1,6 @@
 import unittest
 from src.sorting.insertionsort import insertion_sort
-from src.sorting.sample import nums, words
+from src.sample import nums, words
 
 
 class TestInsertionSort(unittest.TestCase):

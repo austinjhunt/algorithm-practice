@@ -1,6 +1,6 @@
 import unittest
 from src.sorting.quicksort import quicksort
-from src.sorting.sample import nums, words
+from src.sample import nums, words
 
 
 class TestSortingAlgorithms(unittest.TestCase):

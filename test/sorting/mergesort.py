@@ -4,7 +4,7 @@ from src.sorting.heapsort import heapsort
 from src.sorting.insertionsort import insertion_sort
 from src.sorting.mergesort import merge_sort
 from src.sorting.quicksort import quicksort
-from src.sorting.sample import nums, words
+from src.sample import nums, words
 
 
 class TestMergeSort(unittest.TestCase):

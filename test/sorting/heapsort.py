@@ -1,6 +1,6 @@
 import unittest
 from src.sorting.heapsort import heapsort
-from src.sorting.sample import nums, words
+from src.sample import nums, words
 
 
 class TestHeapSort(unittest.TestCase):

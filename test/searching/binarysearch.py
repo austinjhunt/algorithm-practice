@@ -1,7 +1,7 @@
 import unittest
 import random
 from src.searching.binary import binarysearch
-from src.sorting.sample import nums as numeric_lists
+from src.sample import nums as numeric_lists
 
 
 class TestBinarySearch(unittest.TestCase):

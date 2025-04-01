@@ -8,7 +8,7 @@ Goal: use a hash function that maximizes randomness / distribution and minimizes
 You can handle collisions with chaining (linkedlists)
 """
 
-from src.sorting.sample import words
+from src.sample import words
 import logging
 import random
 

@@ -1,6 +1,6 @@
 import unittest
 from src.sorting.bubblesort import bubble_sort
-from src.sorting.sample import nums, words
+from src.sample import nums, words
 
 
 class TestBubbleSort(unittest.TestCase):
