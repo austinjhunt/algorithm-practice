@@ -25,6 +25,9 @@ class Graph:
             else None
         )
 
+    def list_nodes(self):
+        return self.nodes
+
     def add_node(self, node):
         """Add a node to a graph"""
         if node not in self.adjacency_list:
