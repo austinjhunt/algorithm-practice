@@ -1,9 +1,5 @@
 import unittest
-from src.sorting.bubblesort import bubble_sort
-from src.sorting.heapsort import heapsort
-from src.sorting.insertionsort import insertion_sort
 from src.sorting.mergesort import merge_sort
-from src.sorting.quicksort import quicksort
 from src.sample import nums, words
 
 
